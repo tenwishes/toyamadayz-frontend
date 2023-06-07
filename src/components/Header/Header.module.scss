@@ -1,0 +1,99 @@
+@import '../../styles/variables.scss';
+
+.header {
+  display: flex;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 70px;
+  padding: 0 10px;
+
+  .logo {
+    color: rgba(52, 49, 47, 1);
+    cursor: pointer;
+  }
+
+
+  .navigation {
+    margin-left: 3%;
+
+    .link {
+      color: $black;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.2;
+      text-decoration: none;
+      margin-right: 20px;
+      margin-left: 20px;
+      cursor: pointer;
+
+      &:hover {
+        transition: 0.15s ease;
+        color: $blackLight;
+      }
+
+      &.active {
+        color: $blackLight;
+      }
+    }
+  }
+
+  .profile {
+    width: fit-content;
+    margin-left: auto;
+  }
+
+
+
+}
+
+@media only screen and (max-width: 1000px) {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      font-size: 28px;
+    }
+
+    .navigation {
+      background-color: $white;
+      margin: 0;
+      display: block;
+      position: absolute;
+      top: 70px;
+      opacity: 0;
+      left: 0;
+      right: 0;
+
+      .link {
+        display: flex;
+        flex-direction: column;
+        padding: 18px 10px;
+        border-bottom: 1px solid $blackSuperLight;
+        margin: 0;
+
+        &.active {
+          color: $black;
+        }
+      }
+
+      &.active {
+        opacity: 1;
+        transition: 0.15s ease;
+      }
+    }
+
+    .profile {
+      margin: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 359px) {
+  .logo {
+    display: none;
+  }
+}
+
