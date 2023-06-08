@@ -1,7 +1,9 @@
+import {PageTitle} from "../../components";
+
 export const Leaderboard = () => {
     return (
-        <div>
-            <h1>Leaderboard</h1>
-        </div>
+        <>
+            <PageTitle title={"ТАБЛИЦА ЛИДЕРОВ"}/>
+        </>
     )
 }

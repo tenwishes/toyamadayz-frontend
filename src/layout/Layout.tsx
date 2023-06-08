@@ -1,7 +1,6 @@
-import {Header} from "../components/Header/Header.tsx";
+import {Header, Footer} from "../components/";
 import {Outlet} from "react-router-dom";
 import styles from "./Layout.module.scss";
-import {Footer} from "../components/Footer/Footer.tsx";
 
 export const Layout = () => {
     return (

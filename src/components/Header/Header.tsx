@@ -10,11 +10,11 @@ export type LinkType = {
 }
 
 const links: LinkType[] = [
-    {title: "ГЛАВНАЯ", href: "/"},
-    {title: "НОВОСТИ", href: "/news"},
-    {title: "МАГАЗИН", href: "/shop"},
-    {title: "ТАБЛИЦА ЛИДЕРОВ", href: "/leaderboard"},
-    {title: "KILLFEED", href: "/killfeed"}
+    {title: "главная", href: "/"},
+    {title: "новости", href: "/news"},
+    {title: "магазин", href: "/shop"},
+    {title: "таблица лидеров", href: "/leaderboard"},
+    {title: "killfeed", href: "/killfeed"}
 ]
 
 export function Header() {
@@ -35,7 +35,7 @@ export function Header() {
                             className={({isActive}) => isActive ? `${styles.link} ${styles.active}` : styles.link}
                             onClick={() => setOpened(false)}
                         >
-                            {link.title}
+                            {link.title.toUpperCase()}
                         </NavLink>
                     )
                 }

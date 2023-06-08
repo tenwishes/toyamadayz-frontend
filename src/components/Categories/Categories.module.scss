@@ -1,0 +1,24 @@
+@import "../../styles/variables.scss";
+
+
+.categories {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .showButton {
+    margin-left: 8px;
+    text-decoration: underline;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 12px 0;
+
+
+    &:hover {
+      cursor: pointer;
+      color: $blackLight;
+      transition: $hoverTransition;
+    }
+  }
+}
