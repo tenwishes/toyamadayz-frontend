@@ -10,8 +10,8 @@ function App() {
                     <Route path="/" element={<Home/>}/>
                     <Route path="/news" element={<News/>}/>
                     <Route path="/shop" element={<Shop/>}/>
-                    <Route path="/leaderboard" element={<Leaderboard/>}/>
-                    <Route path="/killfeed" element={<Killfeed/>}/>
+                    <Route path="/leaderboards" element={<Leaderboard/>}/>
+                    <Route path="/killfeeds" element={<Killfeed/>}/>
                     <Route path="/profile" element={<Profile/>}/>
                     <Route path="*" element={<NotFound/>}/>
                 </Route>

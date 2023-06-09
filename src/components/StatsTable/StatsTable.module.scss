@@ -1,0 +1,107 @@
+@import '../../styles/variables.scss';
+
+.table {
+  width: 100%;
+  margin-top: 50px;
+
+  .row {
+    padding: 15px 0;
+    border: 1px solid $blackSuperLight;
+    display: flex;
+    margin: 6px 0;
+    border-radius: 5px;
+
+    span {
+      font-size: 14px;
+    }
+  }
+
+  .head {
+    display: flex;
+
+    span {
+      font-weight: 500;
+      font-size: 14px;
+    }
+  }
+
+  .kills, .deaths, .kd, .time {
+    width: 10rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .rank {
+    width: 6rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .player {
+    display: flex;
+    width: 50rem;
+    margin-left: 20px;
+  }
+
+  .adaptiveKd {
+    display: none;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .kills, .deaths, .kd {
+      width: 20rem;
+    }
+    .time {
+      width: 15rem;
+    }
+    .rank {
+      width: 10rem;
+    }
+    .player {
+      width: 50rem;
+    }
+  }
+
+  @media only screen and (max-width: 690px) {
+    .row {
+      span {
+        font-size: 12px;
+      }
+    }
+
+    .head {
+      span {
+        font-size: 12px;
+      }
+    }
+  }
+
+
+  @media only screen and (max-width: 560px) {
+    .kills, .deaths{
+      display: none;
+    }
+    .adaptiveKd {
+      display: flex;
+      justify-content: center;
+      width: 15rem;
+
+    }
+    .kd {
+      width: 20rem;
+      display: none;
+    }
+    .time {
+      width: 15rem;
+      display: flex;
+    }
+    .rank {
+      width: 8rem;
+    }
+    .player {
+      width: 32rem;
+      margin-left: 10px;
+
+    }
+  }
+}

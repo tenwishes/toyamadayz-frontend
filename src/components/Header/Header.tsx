@@ -13,8 +13,8 @@ const links: LinkType[] = [
     {title: "главная", href: "/"},
     {title: "новости", href: "/news"},
     {title: "магазин", href: "/shop"},
-    {title: "таблица лидеров", href: "/leaderboard"},
-    {title: "killfeed", href: "/killfeed"}
+    {title: "таблицы лидеров", href: "/leaderboards"},
+    {title: "killfeed", href: "/killfeeds"}
 ]
 
 export function Header() {
