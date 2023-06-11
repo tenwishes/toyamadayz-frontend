@@ -13,7 +13,7 @@ export const MiniProfile: React.FC<ProfileProps> = ({name, balance, avatar}) => 
         <Link to={"/profile"}>
             <div className={styles.profile}>
                 <div className={styles.info}>
-                    <span>{name}</span>
+                    <span>{name.length > 15 ? `${name.slice(0, 14)}..` : name}</span>
                     <span className={styles.balance}>{balance} ₽</span>
                 </div>
                 <div className={styles.avatar}>

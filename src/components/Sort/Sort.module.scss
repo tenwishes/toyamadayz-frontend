@@ -1,51 +1,24 @@
 @import "../../styles/variables.scss";
 
-.dropDown {
-  position: relative;
+.root {
   display: flex;
-  width: 250px;
-  border: 1px solid $blackSuperLight;
-  padding: 13px 16px;
-  border-radius: 5px;
-  margin-left: auto;
-  margin-top: 20px;
-  z-index: 1;
-  cursor: pointer;
+  width: 100%;
 
-  .current {
-    font-size: 14px;
+  @media only screen and (max-width: 1000px) {
+    margin-top: 20px;
   }
 
 
-  .options {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    position: absolute;
-    top: 39px;
-    right: -1px;
-    border: 1px solid $blackSuperLight;
-    border-top: none;
-    border-radius: 0 0 5px 5px;
+  .container {
+    width: 280px;
+    margin-left: auto;
 
-    .option {
-      padding: 13px 16px;
-      background-color: $white;
-      width: 250px;
-      font-size: 14px;
-      cursor: pointer;
-      transition: $hoverTransition;
-
-      &.active {
-        background-color: $sortActive;
-      }
-
-      &:hover {
-        background-color: $blackSuperLight;
-      }
+    @media only screen and (max-width: 1000px) {
+      width: 100%;
     }
-  }
 
+  }
 }
+
+
+

@@ -1,37 +1,20 @@
-import React from 'react'
 import styles from './Sort.module.scss'
+import {Dropdown} from "../";
 
 const filters = [
-    {id: 1, name: "По новизне"},
-    {id: 2, name: "По популярности"},
+    {id: 1, name: "По популярности"},
+    {id: 2, name: "По новизне"},
     {id: 3, name: "Цена: по возрастанию"},
-    {id: 3, name: "Цена: по убыванию"},
+    {id: 4, name: "Цена: по убыванию"},
 ]
 
 
 export const Sort = () => {
-    const [opened, setOpened] = React.useState<boolean>(false)
-    const [currentFilter, setCurrentFilter] = React.useState<string>('По популярности')
-
     return (
-        <div className={styles.dropDown} onClick={() => {
-            setOpened(!opened)
-        }}>
-            <span className={styles.current}>{currentFilter}</span>
-            {opened ? <ul className={styles.options}>
-                {
-                    filters.map(filter => {
-                        return <li
-                            onClick={() => {
-                                setCurrentFilter(filter.name)
-                            }}
-                            key={filter.id}
-                            className={`${styles.option} ${currentFilter === filter.name ? styles.active : null}`}>
-                            {filter.name}
-                        </li>
-                    })
-                }
-            </ul> : null}
+        <div className={styles.root}>
+            <div className={styles.container}>
+                <Dropdown items={filters} />
+            </div>
         </div>
     )
 }

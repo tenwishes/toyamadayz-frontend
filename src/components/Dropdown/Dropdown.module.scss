@@ -1,0 +1,65 @@
+@import "../../styles/variables.scss";
+
+.dropdown {
+  position: relative;
+  max-width: 100%;
+  font-size: 12px;
+  font-weight: 500;
+
+  .button {
+    display: flex;
+    padding: 14px 18px;
+    background-color: $white;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid $blackSuperLight;
+
+    &.active {
+      border-radius: 5px 5px 0 0;
+    }
+
+    .icon {
+      margin-left: auto;
+      transition: 0.15s ease;
+
+      svg {
+        color: $blackMediumLight;
+      }
+
+      &.active {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .content {
+    z-index: 2;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    left: 0;
+    width: calc(100% - 2px);
+    background-color: $white;
+
+    border: 1px solid $blackSuperLight;
+    border-top: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    .item {
+      padding: 13px 16px;
+      cursor: pointer;
+      transition: 0.15s ease;
+
+      &:hover {
+        background-color: $blackSuperLight;
+      }
+
+      &.active {
+        background-color: $sortActive
+      }
+    }
+  }
+
+
+}

@@ -1,16 +1,9 @@
 import styles from "./StatsTable.module.scss";
-
-type StatType = {
-    player: string,
-    kills: number,
-    deaths: number,
-    playTime: number
-}
+import {Player} from "../../zustand/stores/serversStore.ts";
 
 type TableProps = {
-    stats: StatType[]
+    stats: Player[]
 }
-
 
 export const StatsTable = ({stats}: TableProps) => {
     const round = (number: number) => {
@@ -51,7 +44,7 @@ export const StatsTable = ({stats}: TableProps) => {
                                     <span>{index + 1}</span>
                                 </div>
                                 <div className={styles.player}>
-                                    <span>{player.player.length > 20 ? `${player.player.slice(0, 19)}..` : player.player}</span>
+                                    <span>{player.name.length > 20 ? `${player.name.slice(0, 19)}..` : player.name}</span>
                                 </div>
                                 <div className={styles.kills}>
                                     <span>{player.kills}</span>
@@ -60,13 +53,15 @@ export const StatsTable = ({stats}: TableProps) => {
                                     <span>{player.deaths}</span>
                                 </div>
                                 <div className={styles.adaptiveKd}>
-                                    <span>{player.kills + "/" + player.deaths}</span>
+                                    <span>{`${player.kills} / ${player.deaths}`}</span>
                                 </div>
                                 <div className={styles.kd}>
-                                    <span>{round(player.kills / player.deaths)}</span>
+                                    <span>
+                                        {player.deaths === 0 ? round(player.kills) : round(player.kills / player.deaths)}
+                                    </span>
                                 </div>
                                 <div className={styles.time}>
-                                    <span>{player.playTime}ч</span>
+                                    <span>{player.time}ч</span>
                                 </div>
                             </div>
                         )

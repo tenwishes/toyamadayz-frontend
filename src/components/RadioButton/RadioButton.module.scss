@@ -1,0 +1,32 @@
+@import '../../styles/variables.scss';
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $white;
+  border: 1px solid $blackSuperLight;
+  color: $black;
+  border-radius: 5px;
+  padding: 13px 15px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: $hoverTransition;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(240,240,240);
+  }
+
+  //&.active {
+  //  background-color: $black;
+  //  border: 1px solid $black;
+  //  color: $white;
+  //}
+
+  &.active {
+    background-color: $blackSuperLight;
+    border: 1px solid $blackSuperLight;
+    color: $black;
+  }
+}

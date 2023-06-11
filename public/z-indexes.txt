@@ -1,0 +1,11 @@
+<Header /> - z-index: 0
+
+<Dropdown /> - {
+    overlay: z-index: 1
+    dropdown: z-index: 0
+}
+
+<ItemModal /> - {
+  overlay: z-index: 11
+  window: z-index: 10
+}

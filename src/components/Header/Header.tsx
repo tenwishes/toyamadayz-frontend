@@ -14,7 +14,6 @@ const links: LinkType[] = [
     {title: "новости", href: "/news"},
     {title: "магазин", href: "/shop"},
     {title: "таблицы лидеров", href: "/leaderboards"},
-    {title: "killfeed", href: "/killfeeds"}
 ]
 
 export function Header() {
@@ -41,7 +40,14 @@ export function Header() {
                 }
             </nav>
             <div className={styles.profile}>
-                {0 ? <MiniProfile name={"alaska"} balance={1000} avatar={""}/> : <Button title={"ВОЙТИ ЧЕРЕЗ STEAM"}/>}
+                {0 ? <MiniProfile
+                    name={"голос таверныыыыы"}
+                    balance={1000}
+                    avatar={""}/>
+                    :
+                    <Button
+                        text={"ВОЙТИ ЧЕРЕЗ STEAM"}
+                    />}
             </div>
         </header>
     )

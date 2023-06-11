@@ -2,21 +2,19 @@ import React from "react";
 import styles from "./Button.module.scss";
 
 type ButtonProps = {
-    title: string;
+    text: string;
     onClick?: () => void;
-    className?: string;
-    active?: boolean;
 }
 
-export const Button: React.FC<ButtonProps> = ({title, onClick, className, active}) => {
+export const Button: React.FC<ButtonProps> = ({text, onClick}) => {
     const onClickHandler = () => {
         onClick && onClick();
     }
 
     return <button
-        className={`${className ? styles[className] : styles.button} ${active ? styles.active : null}`}
+        className={styles.button}
         onClick={onClickHandler}
     >
-        {title.toUpperCase()}
+        {text.toUpperCase()}
     </button>
 }

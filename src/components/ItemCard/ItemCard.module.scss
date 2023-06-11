@@ -44,10 +44,10 @@
     font-weight: 400;
   }
 
-  &:hover {
-    scale: 1.02;
-    transition: $hoverTransition;
-  }
+  //&:hover {
+  //  scale: 1.02;
+  //  transition: $hoverTransition;
+  //}
 
   .oldPrice {
     text-decoration: line-through;
